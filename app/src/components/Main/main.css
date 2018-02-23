@@ -1,0 +1,321 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* .main-container { */
+/*   margin: 5% 0; */
+/* } */
+/*  */
+/* @media only screen and (max-width: 768px) { */
+/*   .main-container { */
+/*     margin: 7% 0; */
+/*   } */
+/* } */
+
+.jumbotron {
+  text-align: -webkit-center;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.Intro {
+  padding: 28% 0;
+  height: 94em;
+  background: no-repeat top center url('../../assets/machu-picchu-inca-peru.jpeg');
+}
+
+@media only screen and (max-width: 768px) {
+  .Intro {
+    padding: 80% 0;
+    height: 53em;
+  }  
+
+  .jumboCarousel {
+    padding: 15% 0;
+    height: 47em;
+  }
+
+}
+
+.introText {
+  margin: 0 auto;
+  height: 50%;
+  color: floralwhite;
+}
+
+.greyBox {
+  background: #3f3f3f;
+  opacity: 0.8;
+  padding: 1% 0;
+  margin-right: 10%;
+}
+
+/* About.css */
+.About {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 5% 20%;
+}
+
+@media only screen and (max-width: 768px) {
+  .About {
+    padding: 5%;
+  }
+}
+
+.About > .mainAbout, .raicesAbout {
+  color: red;
+}
+
+.separator {
+  height: 2px;
+  width: 60%;
+  background: red;
+  margin: 0 auto;
+}
+
+/* Dances.css */
+.dancesSection {
+  padding: 5% 15%;
+  min-height: calc(86vh);
+}
+
+@media only screen and (max-width: 768px) {
+  .dancesSection {
+    padding: 0 2%;
+    padding-top: 23%;
+    padding-bottom: 69%;
+  }
+}
+
+/*Photos*/
+.photosSection {
+  padding: 5% 10%;
+}
+
+
+/* Contact.css */
+.contactSection {
+  min-height: calc(86vh);
+}
+
+@media only screen and (max-width: 768px) {
+  .contactSection {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contactSection {
+    padding: 4% 20%;
+  }
+}
+
+.reqHeadline {
+  margin: 10rem 0 5rem 0;
+  text-align: center;
+}
+
+#formControlsTextarea {
+  height: 150px;
+}
+
+.committeeInfo {
+  margin: 10rem 0;
+  text-align: center;
+}
+
+.historySection {
+  padding: 3% 0;
+}
+
+.mainHistory {
+  text-align: center;
+  padding: 0 20%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainHistory {
+    padding: 5% 10%;
+  }
+}
+
+/* Carousels */
+a.carousel-control.left, a.carousel-control.right {
+  background: rgba(255, 255, 255, 0);
+}
+
+@media only screen and (min-width: 768px) {
+  .ImageCarousel {
+    padding: 5% 25%;
+  }
+
+  .carousel-inner > .item > img {
+    width: 100%;
+    height: 500px; 
+  } 
+
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-inner > .item > img {
+    height: 300px;
+  }  
+
+  .ImageCarousel {
+    padding: 5% 15%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .ImageCarousel {
+    padding: 5% 35%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    text-align: center;
+    margin: 0 15rem;
+  }
+}
+
+/* Dancers page */
+.dancersSection {
+  min-height: calc(86vh);
+}
+
+.dancers {
+  padding: 10% 0;
+}
+
+.dancers.page-header {
+  padding-top: 10%;
+}
+
+/* Main.css */
+a {
+  text-decoration: none;
+}
+
+.navMain {
+  background: #3f3f3f;
+  opacity: .8;
+}
+
+.fa-2x {
+  font-size: 1.5em;
+}
+
+.title {
+  margin: 1em;
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-default .navbar-brand {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+
+.links {
+  display: inline-flex;
+}
+
+.routeLinks {
+  display: inherit;
+  margin: 1.5rem 1rem;
+}
+
+.routeLinks > li > a {
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 1rem;
+  font-size: larger;
+}
+
+/* for mobile hamburger menu button */
+.navbar-default .navbar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    background: #3f3f3f;
+    opacity: .8;
+  }
+}
+
+.socials {
+  margin: 1.5rem 1rem;
+  color: red;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: initial;
+  }
+
+  .routeLinks > li {
+    margin-top: 1em;
+  }
+
+  .raicesLogo {
+    width: 2em; 
+    height: 2em;
+    margin-top: .5em;
+  } 
+}
+
+@media only screen and (min-width: 768px) {
+  .raicesLogo {
+    width: 2.5em; 
+    height: 2.5em;
+  }
+}
+
+.raicesLogo {
+  margin-left: 1em;
+}
+
+.footer {
+  position: static;
+  width: 100%;
+  background: #3f3f3f;
+  opacity: .8;
+  color: #ffffff;
+  padding: 3% 0;
+  text-align: center;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    margin-top: 0 2em 0 2em;
+  }
+}
+
+.event {
+  margin: 3% 0;
+  color: black;
+  text-align: center;
+  background: #ffffff;
+  padding: 1% 0;
+}
+
+.presentationsSection {
+  padding: 5% 0;
+}
+
+.presentationsSection.container {
+  padding: 5% 15%;
+}

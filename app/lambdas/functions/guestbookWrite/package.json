@@ -1,0 +1,15 @@
+{
+  "name": "raicesguestbook",
+  "version": "1.0.0",
+  "description": "dynamodb and mailgun processes for raices site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blake Watkins",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.12.0",
+    "mailgun-js": "^0.8.1"
+  }
+}
