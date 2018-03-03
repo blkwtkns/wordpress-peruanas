@@ -1,12 +1,15 @@
 #!/bin/sh
 
-WP_USER='wordpress',
-WP_PW='wordpress',
-WP_THEME_DIR='postlight-headless-wp',
-WP_THEME_NAME='postlight-headless-wp',
-WP_EMAIL='blkwtkns@headlesswpstarter.dev',
-WP_DB_NAME='wordpress',
-WP_DESCRIPTION='Just another (headless) WordPress site',
+alias wp="docker-compose run --rm wpcli"
+
+WP_USER="wordpress"
+WP_PW="wordpress"
+WP_THEME_DIR="postlight"
+WP_THEME_NAME="postlight"
+WP_EMAIL="wordpress@wpheadless.com"
+WP_DB_NAME="wordpress"
+WP_DESCRIPTION="Just another (headless) WordPress site"
+NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
 # wp core download --version=4.9.2 --locale=en_US --force
 
@@ -15,18 +18,20 @@ WP_DESCRIPTION='Just another (headless) WordPress site',
 # wp db drop --yes
 # wp db create --yes
 
-wp core install --url=localhost:8000 --title=$WP_THEME_NAME --admin_user=$WP_USER --admin_password=$WP_PW --admin_email=$WP_EMAIL --skip-email --yes
+# wp db export - > wp-backup_$NOW.sql
 
-wp theme activate $WP_THEME_DIR --yes
+wp core install --url=localhost:8080 --title=$WP_THEME_NAME --admin_user=$WP_USER --admin_password=$WP_PW --admin_email=$WP_EMAIL
+
+wp theme activate $WP_THEME_DIR
 # wp theme delete twentyfourteen
 # wp theme delete twentyfifteen
 # wp theme delete twentysixteen
 # wp theme delete twentyseventeen
-
+#
 # wp plugin delete akismet
 # wp plugin delete hello
 
-wp plugin activate --all --yes
+wp plugin activate --all
 
 # wp acf sync
 
