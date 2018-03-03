@@ -4,11 +4,11 @@ alias wp="docker-compose run --rm wpcli"
 
 WP_USER="wordpress"
 WP_PW="wordpress"
-WP_THEME_DIR="postlight"
-WP_THEME_NAME="postlight"
-WP_EMAIL="wordpress@wpheadless.com"
+# WP_THEME_DIR="postlight"
+# WP_THEME_NAME="postlight"
+WP_EMAIL="example@example.com"
 WP_DB_NAME="wordpress"
-WP_DESCRIPTION="Just another (headless) WordPress site"
+WP_DESCRIPTION="headless WordPress site"
 NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
 # wp core download --version=4.9.2 --locale=en_US --force
@@ -22,16 +22,12 @@ NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
 wp core install --url=localhost:8080 --title=$WP_THEME_NAME --admin_user=$WP_USER --admin_password=$WP_PW --admin_email=$WP_EMAIL
 
-wp theme activate $WP_THEME_DIR
-# wp theme delete twentyfourteen
-# wp theme delete twentyfifteen
-# wp theme delete twentysixteen
-# wp theme delete twentyseventeen
-#
-# wp plugin delete akismet
-# wp plugin delete hello
+wp rewrite structure "/%postname%/"
 
 wp plugin activate --all
+# wp option update permalink_structure '/%postname%'
+
+# wp theme activate $WP_THEME_DIR
 
 # wp acf sync
 
