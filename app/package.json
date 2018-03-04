@@ -47,6 +47,7 @@
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "isomorphic-unfetch": "^2.0.0",
     "postcss-loader": "^1.2.0",
     "react": "^15.4.2",
     "react-addons-create-fragment": "^15.4.2",
@@ -74,7 +75,8 @@
     "dev": "concurrently --kill-others \"npm run dev-server\" \"npm run webpack-dev-server\"",
     "dev-server": "NODE_ENV=development nodemon --exec babel-node ./bin/server.js",
     "webpack-dev-server": "NODE_ENV=development babel-node ./bin/dev-server.js",
-    "start": "concurrently --kill-others \"npm run start-api\" \"npm run start-server\"",
+    "test-wp-rest": "NODE_ENV=development nodemon --exec babel-node ./bin/test-server.js",
+    "start": "npm run start-server",
     "start-server": "NODE_ENV=production babel-node ./bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }

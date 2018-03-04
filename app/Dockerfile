@@ -1,16 +1,16 @@
-# FROM mhart/alpine-node:latest
 FROM node:latest
 
-# RUN useradd --user-group --create-home --shell /bin/false app-user
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-ENV HOME=/home/app-user
-
-COPY package.json $HOME/app/
-# RUN chown -R app-user:app-user $HOME/*
-
-# USER app-user
-WORKDIR $HOME/app
-
+# Install app dependencies
+COPY package.json /usr/src/app/
 RUN npm install
 
-CMD ["npm", "start-server"]
+# Bundle app source
+COPY . /usr/src/app
+RUN npm run build
+
+EXPOSE 3000
+CMD [ "npm", "start" ]
