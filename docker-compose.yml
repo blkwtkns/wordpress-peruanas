@@ -68,21 +68,21 @@ services:
   #     MYSQL_USER: wordpress
   #     MYSQL_PASSWORD: wordpress
 
-  # web:
-  #   build: app
-  #   ports:
-  #     - "3000:3000"
-  #   restart: always
-  #   volumes:
-  #     - ./app:/home/app-user/app
-  #   environment:
-  #     APP_PORT: 3000
-  #     WORDPRESS_DB_HOST: 3306
-  #     WORDPRESS_HOST: 8080
-  #     WORDPRESS_DB_USER: wordpress
-  #     WORDPRESS_DB_PASSWORD: wordpress
-  #     MYSQL_USER: wordpress
-  #     MYSQL_PASSWORD: wordpress
+  web:
+    build: app
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./app:/home/app-user/app
+    environment:
+      APP_PORT: 3000
+      WORDPRESS_DB_HOST: 3306
+      WORDPRESS_HOST: 8080
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
 
 volumes:
   db_data:
